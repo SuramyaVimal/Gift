@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy 21st to My Favourite Listener</h1>
+        <div class="gift-box" id="giftBox">
+            <img src="gift-closed.png" alt="Gift Box" id="giftClosed">
+            <img src="gift-opened.png" alt="Surprise Image" id="giftOpened" style="display: none;">
+        </div>
+        <p>
+            <a href="Tanya.html" class="navigate-link">Click here to explore your surprise</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

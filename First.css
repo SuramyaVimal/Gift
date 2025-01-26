@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    margin: auto;
+    max-width: 600px;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gift-box {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.gift-box img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ff4081;
+    border-radius: 10px;
+}
+
+.navigate-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff4081;
+    text-decoration: none;
+}
+
+.navigate-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gift Box</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f7e9ff, #e5f4ff);
+            font-family: 'Cursive', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Gift Box Image Styling */
+        .gift-box {
+            cursor: pointer;
+            width: 150px;
+            transition: transform 0.4s ease;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Floating Text Styling */
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: #5c6bc0;
+            transition: opacity 0.6s, top 1s;
+        }
+
+        /* Floating Effect (Visible State) */
+        .show-text {
+            opacity: 1;
+            top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Open Gift Box Image -->
+        <img src="gift open.jpg" alt="Open Gift Box" id="giftBox" class="gift-box">
+        <!-- Hidden Closed Gift Box Image (For Interactive Change) -->
+        <img src="gift closed.jpg" alt="Closed Gift Box" id="giftBoxClosed" class="gift-box" style="display:none;">
+        
+        <!-- Floating Text -->
+        <div class="text" id="floatingText">
+            Happiest 21st <br> to my favourite Listener
+        </div>
+    </div>
+
+    <script>
+        const giftBox = document.getElementById('giftBox');
+        const giftBoxClosed = document.getElementById('giftBoxClosed');
+        const floatingText = document.getElementById('floatingText');
+
+        giftBox.addEventListener('click', () => {
+            // Hide the open gift box and show the closed gift box
+            giftBox.style.display = 'none';
+            giftBoxClosed.style.display = 'block';
+
+            // Show floating text
+            floatingText.classList.add('show-text');
+        });
+    </script>
+</body>
+</html>
